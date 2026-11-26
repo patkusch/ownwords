@@ -16,7 +16,7 @@ import re
 import sys
 from pathlib import Path
 
-from . import __version__, claims, facts, quirks, tells
+from . import __version__, claims, facts, plain, quirks, tells
 
 EXIT_OK, EXIT_FAIL, EXIT_USAGE, EXIT_REVIEW = 0, 1, 2, 3
 
@@ -55,7 +55,8 @@ def check(before: str, after: str, waive: dict | None = None) -> dict:
     reviews = [f for f in kept if f["level"] == "review"]
     verdict = "fail" if fails else "review" if reviews else "pass"
     return {"verdict": verdict, "unchanged": before.strip() == after.strip(),
-            "fail": fails, "review": reviews, "waived": waived}
+            "fail": fails, "review": reviews, "waived": waived,
+            "plain": plain.compare(before, after)}
 
 
 def _print_check(result: dict) -> None:
@@ -66,6 +67,8 @@ def _print_check(result: dict) -> None:
     for level in ("fail", "review"):
         for finding in result[level]:
             print(f"  [{level}] {PLAIN.get(finding['kind'], finding['kind'])}: {finding['detail']}  ({finding['kind']})")
+    for note in result.get("plain", []):
+        print(f"  [{note.split(':')[0]}] {note.split(': ', 1)[1]}")
     for finding in result["waived"]:
         print(f"  [waived] {PLAIN.get(finding['kind'], finding['kind'])}: "
               f"{finding['detail']} (reason given: {finding['reason']})")
@@ -82,6 +85,18 @@ def _print_score(result: dict, name: str) -> None:
             print(f"      line {hit['line']}: {hit['text']}")
         if len(item["hits"]) > 5:
             print(f"      and {len(item['hits']) - 5} more")
+    m = result.get("plain")
+    if m:
+        print(f"  How plain it is: {m['words_per_sentence']} words per sentence, "
+              f"{m['long_words_percent']}% long words, "
+              f"{m['sentences_over_30_words']} sentences over 30 words")
+        for item in m["heavy_words"][:8]:
+            print(f"      line {item['line']}: \"{item['text']}\" could be \"{item['plainer']}\"")
+        for item in m["noun_heavy_phrases"][:5]:
+            print(f"      line {item['line']}: \"{item['text']}\" hides a verb")
+        extra = len(m["heavy_words"]) + len(m["noun_heavy_phrases"]) - min(len(m["heavy_words"]), 8) - min(len(m["noun_heavy_phrases"]), 5)
+        if extra > 0:
+            print(f"      and {extra} more")
     if result["stale_not_scored"]:
         print("  Not scored because their check date has passed: "
               + ", ".join(result["stale_not_scored"]))
@@ -202,7 +217,9 @@ def main(argv: list[str] | None = None) -> int:
         results, over = {}, False
         for name in args.files:
             try:
-                results[name] = tells.score(_read(name))
+                text = _read(name)
+                results[name] = tells.score(text)
+                results[name]["plain"] = plain.measure(text)
             except OSError as error:
                 print(error, file=sys.stderr)
                 return EXIT_USAGE

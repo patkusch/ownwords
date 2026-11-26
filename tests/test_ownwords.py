@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from ownwords import claims, facts, quirks, tells  # noqa: E402
+from ownwords import claims, facts, plain, quirks, tells  # noqa: E402
 from ownwords.cli import check  # noqa: E402
 
 
@@ -132,6 +132,40 @@ class Tells(unittest.TestCase):
             self.assertLess(datetime.date.fromisoformat(tell["added"]),
                             datetime.date.fromisoformat(tell["review_by"]), tell["id"])
             self.assertIn(tell["evidence"], {"certain", "measured", "catalogue"})
+
+
+class Plain(unittest.TestCase):
+    HEAVY = ("In order to facilitate the implementation of the new system, the team conducted an "
+             "analysis of the requirements prior to the commencement of work.")
+    LIGHT = "The team studied what the new system needed before they started work."
+
+    def test_heavy_words_are_found_with_a_plainer_word(self):
+        found = {h["text"].lower(): h["plainer"] for h in plain.measure(self.HEAVY)["heavy_words"]}
+        self.assertEqual(found["in order to"], "to")
+        self.assertEqual(found["prior to"], "before")
+        self.assertIn("facilitate", found)
+
+    def test_hidden_verbs_are_found(self):
+        phrases = [p["text"].lower() for p in plain.measure(self.HEAVY)["noun_heavy_phrases"]]
+        self.assertIn("conducted an analysis", phrases)
+
+    def test_plain_text_is_clean(self):
+        m = plain.measure(self.LIGHT)
+        self.assertEqual(m["heavy_words"] + m["noun_heavy_phrases"], [])
+
+    def test_compare_says_plainer(self):
+        notes = plain.compare(self.HEAVY, self.LIGHT)
+        self.assertTrue(notes and all(n.startswith("plainer") for n in notes), notes)
+        self.assertTrue(all(n.startswith("heavier") for n in plain.compare(self.LIGHT, self.HEAVY)))
+
+    def test_quotations_are_not_judged(self):
+        self.assertEqual(plain.measure('She said "we will utilize it in order to win".')["heavy_words"], [])
+
+    def test_no_plainer_word_changes_how_sure_a_claim_is(self):
+        for heavy, simple in plain.HEAVY.items():
+            before, after = f"The team will {heavy} it.", f"The team will {simple} it."
+            findings = [f for f in claims.compare(before, after) if f["level"] == "fail"]
+            self.assertEqual(findings, [], (heavy, simple))
 
 
 class Quirks(unittest.TestCase):

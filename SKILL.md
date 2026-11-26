@@ -29,7 +29,7 @@ Then run:
 python3 <this skill's folder>/scripts/ownwords score original.txt
 ```
 
-The script lists each sign it found, with the line. It scores only signs that have a source and an in-date check.
+The script lists each sign it found, with the line. It scores only signs that have a source and an in-date check. It also says how plain the text is: words per sentence, long words, and heavy phrases with a plainer word for each.
 
 - **No signs found, and it reads fine to you:** say so and return the text unchanged. Stop here.
 - **The person asked only for a review:** report what the script found plus anything from Step 2 that you can see, quote the lines, and stop. Do not rewrite.
@@ -62,6 +62,26 @@ Work from cause to fix.
 - **Match the kind of document.** An email reads like an email. A README stays scannable. Academic text keeps its terms. Do not make formal writing chatty.
 - **If they gave samples of their own writing,** read them first and copy their habits: sentence length, how they open, how blunt they are, whether they use "I". Their voice wins over your taste.
 - **Do not swap words for rarer words.** Do not add slang or filler.
+
+### Plain words
+
+Machine drafts are heavier than they need to be. The score in Step 1 lists heavy words, hidden verbs and long sentences. Fix those, and any others you see.
+
+- **Use the everyday word.** "Use" for "utilise". "Help" for "facilitate". "Before" for "prior to". "To" for "in order to". "Because" for "due to the fact that".
+- **Turn nouns back into verbs.** "Conducted an analysis of" becomes "analysed". "Made a decision" becomes "decided". "The implementation of the plan" becomes "carrying out the plan".
+- **One idea per sentence.** Split a sentence that runs past about 30 words, or that holds two points joined by "and", "which" or a dash.
+- **Cut doubled words.** "Each and every" is "every". "Past history" is "history".
+- **Put the person first.** "The team decided", not "a decision was reached by the team", when the text says who did it. If it does not say who, leave it. Naming someone would add a fact.
+- **Prefer short over long when both are exact.** Do not trade an exact word for a vague one.
+
+Keep these as they are:
+
+- Terms of the trade. A doctor's "hypertension" is not "high blood pressure" unless the reader is a patient.
+- Every word that says how sure a claim is. When you split a sentence, "may", "about" and "some" travel with the part they belong to.
+- Quotations, names, and anything the lock protects.
+- A long sentence that reads easily. Length alone is not a fault.
+
+The check in Step 4 says whether the rewrite came out plainer or heavier than the original. If it says heavier, look again.
 
 ### Human habits
 
