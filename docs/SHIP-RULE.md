@@ -39,5 +39,5 @@ A change that fails the rule goes in [REJECTED.md](REJECTED.md) with the numbers
 ## What is not automatic yet
 
 - Turning a person's edits into a proposed rule change. `ownwords kept` only records them.
-- A blind reader test. Version 0.1 has no "which one reads better" score.
+- A reader test with people. `scripts/reader_test.py` runs one with a local model, which is a weak reader.
 - Retiring a stale sign. The scorer stops counting it, but a person must re-check the source and move the date.

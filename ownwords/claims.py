@@ -45,6 +45,9 @@ def _count(text: str, words: list[str]) -> dict:
         elif word in ("over", "under", "about", "around"):
             hits = sum(1 for m in re.finditer(rf"\b{word}\b", text, re.I)
                        if NUMBER_NEXT.match(text, m.end()))
+        elif word == "most":
+            # "The most significant" is a comparison, not a count.
+            hits = len(re.findall(r"(?<!\bthe )\bmost\b", text, re.I))
         elif word == "all":
             hits = len(re.findall(r"\ball\b(?!\s+(?:right|in all))", text, re.I))
         else:

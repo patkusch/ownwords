@@ -114,9 +114,45 @@ Read these numbers with care.
 - **Some of the 47 are false alarms.** The count of "not" words changes in honest edits too. Nobody has gone through all 47 by hand.
 - **The checker was improved after this trial.** The first run flagged capital letters in headings and labels as lost names. That was fixed, and the numbers above come from the fixed checker on the same rewrites. So this is not a clean held-out result for the name check.
 - **One trial, one run each, one model family.** No repeat runs, so no measure of run-to-run noise.
-- **Nobody has judged which version reads better.** There is no blind reader test yet. This trial shows the skill keeps facts. It does not show the writing is better.
+- **Keeping facts is not the same as reading better.** That is measured separately, below.
 
 Everything from the trial is in [evals/trial](evals/trial), including the assistant's notes on where the skill got in its way.
+
+## Does it read better?
+
+A blind reader saw two versions of each document with no labels and picked one. Each pair was shown twice, once in each order. If the pick changed with the order, the pair counts as a tie. The reader was a local model (Gemma 3, 12B), a different model family from the one that wrote the rewrites.
+
+| Comparison, 16 pairs each | First preferred | Second preferred | Tie |
+|---|---|---|---|
+| With the skill against the machine draft | 9 | 0 | 7 |
+| With the skill against the rewrite without it | 2 | 1 | 13 |
+| Rewrite without the skill against the machine draft | 2 | 1 | 13 |
+| Habits and slips against the clean skill rewrite | 1 | 10 | 5 |
+| Habits and slips against the machine draft | 4 | 4 | 8 |
+
+What this says:
+
+- **The skill's rewrite beat the machine draft** in 9 of 16 pairs and never lost.
+- **This reader cannot separate the two rewrites.** In 13 of 16 pairs it simply picked whichever version it saw first.
+- **Deliberate slips lost.** The version with misspellings and dropped commas lost to the clean rewrite 10 to 1, and only drew with the machine draft.
+
+A small model is a poor stand-in for a person, and a model may punish typos more than a human reader would. To judge for yourself, [evals/reader/sheet.md](evals/reader/sheet.md) holds 32 unlabelled pairs:
+
+```bash
+python3 scripts/reader_test.py tally your-answers.txt
+```
+
+## Human habits and small slips
+
+The skill gives a rewrite the habits of someone writing by hand: contractions, uneven sentences, starting with "And" or "But". It can also add a few small mistakes:
+
+```bash
+python3 scripts/ownwords quirks rewrite.txt -o final.txt
+```
+
+This adds roughly one slip per 90 words: a common misspelling, a dropped apostrophe or comma, two spaces after a full stop. It lists every slip it made. It never touches a number, name, quotation, link, citation, code, heading, or a word that says how sure a claim is, and it checks its own result against the fact lock. In the trial, 13 of 16 rewrites with habits and slips passed the lock outright, and the other 3 were false alarms of the kinds described above.
+
+The reader test above did not favour the slips. They are there because some people want them. The skill always lists them and keeps a clean copy.
 
 ## The signs it scores, and the ones it refuses to
 
@@ -141,7 +177,8 @@ When you edit a rewrite, `ownwords kept` records which sentences you changed. Tu
 
 ## Not built yet
 
-- A blind test of which version readers prefer.
+- A reader test with people. The blind sheet exists, but only a model has judged so far.
+- A plain-words step. The skill cuts padding, but it does not yet go after heavy words or tangled sentences, and nothing measures them.
 - Scoring a rewrite against samples of your own writing. The skill uses your samples, but nothing measures how close it got.
 - Languages other than English. The fact check works on numbers, links and quotations in any language. The signs are English only.
 - Repeat runs of the trial, to measure noise.

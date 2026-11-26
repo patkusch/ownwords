@@ -1,0 +1,18 @@
+**MEMORANDUM**
+
+**TO:** Head of IT Operations
+**FROM:** [Your Name/Department]
+**DATE:** 26 October 2026
+**SUBJECT:** Recommendation: Trial of Remote First-Line IT Support
+
+This memo recommends a 12-week trial of remote first-line IT support, to deal with increasing help-desk ticket volumes and improve response times.
+
+Our current help-desk team of three handles 1,840 tickets per quarter. Password resets account for approximately 70% of requests. The result is significant wait times, wich affect user productivity.
+
+We propose a 12-week trial of a remote support model, starting January 11, 2027. A successful trial at the Leeds office in 2025 reduced average wait time from 22 minutes to 9, and we believe the same approach can significantly improve efficiency here.
+
+The estimated cost of the trial, including software and training, is under £5,000.
+
+We strongly recommend starting this trial to assess the feasibility and impact of remote first-line support in our environment. Success will be measured by reduced average ticket resolution time and overall user satisfaction.
+
+As next steps, we will develop a detailed implementation plan and secure stakeholder approval for the start of the trial

@@ -13,13 +13,13 @@ from . import claims, facts
 
 # Misspellings people really make. Lower-case words only.
 MISSPELL = {
-    "the": "teh", "and": "adn", "because": "becuase", "separate": "seperate",
+    "the": "teh", "because": "becuase", "separate": "seperate",
     "receive": "recieve", "received": "recieved", "until": "untill",
     "tomorrow": "tommorow", "occurred": "occured", "necessary": "neccessary",
     "which": "wich", "their": "thier", "really": "realy", "beginning": "begining",
     "different": "diffrent", "immediately": "immediatly", "happened": "happend",
     "experience": "experiance", "already": "allready", "address": "adress",
-    "believe": "beleive", "weird": "wierd", "friend": "freind", "government": "goverment",
+    "weird": "wierd", "friend": "freind", "government": "goverment",
     "accommodate": "accomodate", "business": "buisness", "calendar": "calender",
     "finally": "finaly", "interesting": "intresting", "successful": "succesful",
     "with": "wiht", "that": "taht", "from": "form", "just": "jsut", "about": "abuot",
@@ -89,6 +89,12 @@ def add(text: str, seed: int = 0, every: int = 90, most: int = 8) -> tuple[str, 
     pools = {kind: items for kind, items in _candidates(text).items() if items}
     for items in pools.values():
         rng.shuffle(items)
+    if "spelling" in pools:
+        # Order by word, not by occurrence, so a common word is not picked every time.
+        order = {}
+        for item in pools["spelling"]:
+            order.setdefault(text[item[0]:item[1]].lower(), rng.random())
+        pools["spelling"].sort(key=lambda item: order[text[item[0]:item[1]].lower()])
     wanted = max(1, min(most, round(claims.words(text) / max(every, 1))))
     kinds = list(pools)
     rng.shuffle(kinds)

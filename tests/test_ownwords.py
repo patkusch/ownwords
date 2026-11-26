@@ -86,6 +86,10 @@ class Claims(unittest.TestCase):
     def test_negation(self):
         self.assertIn("negation-changed", kinds("The test was passed.", "The test was not passed."))
 
+    def test_the_most_is_not_a_count(self):
+        self.assertEqual(claims.compare("It was the most useful change.", "It was a useful change."), [])
+        self.assertIn("how-often-removed", kinds("Most staff agreed.", "Staff agreed."))
+
     def test_about_only_counts_before_a_figure(self):
         self.assertEqual(claims.compare("We talked about pricing.", "We discussed pricing."), [])
 
@@ -140,6 +144,12 @@ class Quirks(unittest.TestCase):
         changed, notes = quirks.add(self.TEXT, seed=1, every=20)
         self.assertNotEqual(changed, self.TEXT)
         self.assertGreaterEqual(len(notes), 2)
+
+    def test_one_common_word_is_not_misspelled_every_time(self):
+        text = "We went to the shop and the park and the pool with the dog because the sun was out. " * 6
+        _, notes = quirks.add(text, seed=4, every=10)
+        spelled = [n for n in notes if "spelled" in n]
+        self.assertLessEqual(sum('"the"' in n for n in spelled), 1)
 
     def test_same_seed_same_result(self):
         self.assertEqual(quirks.add(self.TEXT, seed=3), quirks.add(self.TEXT, seed=3))
