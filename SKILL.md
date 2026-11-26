@@ -57,7 +57,21 @@ Work from cause to fix.
 - **Keep the author's order and emphasis** unless the order itself is the problem.
 - **Match the kind of document.** An email reads like an email. A README stays scannable. Academic text keeps its terms. Do not make formal writing chatty.
 - **If they gave samples of their own writing,** read them first and copy their habits: sentence length, how they open, how blunt they are, whether they use "I". Their voice wins over your taste.
-- **Do not swap words for rarer words.** Never add errors, slang or filler to seem human.
+- **Do not swap words for rarer words.** Do not add slang or filler.
+
+### Human habits
+
+People do not write evenly. Once the text says the plain thing, give it the habits of someone writing by hand. Use more of these in a message or a post, fewer in a report, and none inside a quotation.
+
+- **Contractions.** "It's", "we're", "didn't", where a person would say them. Keep every "not": "did not" may become "didn't", never "did".
+- **Uneven sentences.** A long one, then a short one. Sometimes a fragment. Like this.
+- **Starting with "And", "But" or "So".** People do it all the time.
+- **Plain joins.** "So" for "therefore", "but" for "however", "also" for "additionally".
+- **A direct word to the reader**, where the document already speaks to someone: "you'll see", "as you know".
+- **A loose end left loose.** Not every paragraph needs a closing line that ties it up.
+- **The author's own tics.** If their samples show a habit, such as dashes, brackets or "anyway", use it the way they do.
+
+A habit is never a reason to add a fact, an opinion the author did not give, or a feeling they did not state.
 
 ### Three things you must never do
 
@@ -73,7 +87,7 @@ Save your rewrite to a second file and run:
 python3 <this skill's folder>/scripts/ownwords check original.txt rewrite.txt
 ```
 
-- **PASS:** go on to Step 5.
+- **PASS:** go on to Step 4b.
 - **FAIL:** something that must not change has changed. Fix the rewrite and run the check again. Do not hand over a failing rewrite.
 - **REVIEW:** no fact changed, but the script saw something worth a look, such as much shorter text. Check each point. Fix it, or keep it and tell the person.
 
@@ -89,14 +103,30 @@ Never waive a lost or added number, date, quote, link or citation. Restore it. A
 
 The script cannot see everything. It does not notice two numbers swapped with each other, a fact moved onto the wrong subject, or a sentence whose meaning changed without any of its key words changing. Read your rewrite against the original once more yourself, sentence by sentence.
 
+## Step 4b. Add the small slips
+
+Real writing has small mistakes in it. After the lock passes, add a few:
+
+```bash
+python3 <this skill's folder>/scripts/ownwords quirks rewrite.txt -o final.txt
+```
+
+The script adds roughly one slip per 90 words: a common misspelling, a dropped apostrophe or comma, two spaces after a full stop, a small "i". It lists each one. It never touches a number, a name, a quotation, a link, a citation, code, a heading, or a word that says how sure a claim is, and it checks its own result against the lock.
+
+- Add the slips with the script, not by hand. Slips you make yourself can land on a fact.
+- Use `--every 150` for a formal document and `--every 60` for a casual message. Use `--seed 2` (or any number) for a different set.
+- **Skip this step** when the person asks for a clean copy, and for code, legal wording, and anything that will be printed or signed.
+- Keep the clean rewrite too. The person may want it.
+
 ## Step 5. Hand it over
 
 Give, in this order:
 
-1. The rewrite.
+1. The rewrite, with the slips in it.
 2. One line on the check: passed, or passed with these waivers.
 3. What you changed and why, in three to six short points. Name the cause, not the rule number.
-4. Anything you left alone on purpose, and any questions: "This line is vague. Do you have the actual figure?"
+4. The slips that were added on purpose, as the script listed them, and an offer of the clean copy.
+5. Anything you left alone on purpose, and any questions: "This line is vague. Do you have the actual figure?"
 
 Do not claim the text is now "undetectable" or "human". Say what you changed.
 

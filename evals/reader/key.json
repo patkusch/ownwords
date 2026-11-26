@@ -1,0 +1,162 @@
+{
+  "1": {
+    "file": "01-email.txt",
+    "A": "original",
+    "B": "with"
+  },
+  "2": {
+    "file": "01-email.txt",
+    "A": "without",
+    "B": "with"
+  },
+  "3": {
+    "file": "02-readme.txt",
+    "A": "with",
+    "B": "original"
+  },
+  "4": {
+    "file": "02-readme.txt",
+    "A": "without",
+    "B": "with"
+  },
+  "5": {
+    "file": "03-report.txt",
+    "A": "original",
+    "B": "with"
+  },
+  "6": {
+    "file": "03-report.txt",
+    "A": "with",
+    "B": "without"
+  },
+  "7": {
+    "file": "04-blog.txt",
+    "A": "with",
+    "B": "original"
+  },
+  "8": {
+    "file": "04-blog.txt",
+    "A": "without",
+    "B": "with"
+  },
+  "9": {
+    "file": "05-product.txt",
+    "A": "original",
+    "B": "with"
+  },
+  "10": {
+    "file": "05-product.txt",
+    "A": "without",
+    "B": "with"
+  },
+  "11": {
+    "file": "06-linkedin.txt",
+    "A": "with",
+    "B": "original"
+  },
+  "12": {
+    "file": "06-linkedin.txt",
+    "A": "with",
+    "B": "without"
+  },
+  "13": {
+    "file": "07-cover.txt",
+    "A": "with",
+    "B": "original"
+  },
+  "14": {
+    "file": "07-cover.txt",
+    "A": "with",
+    "B": "without"
+  },
+  "15": {
+    "file": "08-meeting.txt",
+    "A": "original",
+    "B": "with"
+  },
+  "16": {
+    "file": "08-meeting.txt",
+    "A": "without",
+    "B": "with"
+  },
+  "17": {
+    "file": "09-abstract.txt",
+    "A": "original",
+    "B": "with"
+  },
+  "18": {
+    "file": "09-abstract.txt",
+    "A": "without",
+    "B": "with"
+  },
+  "19": {
+    "file": "10-press.txt",
+    "A": "original",
+    "B": "with"
+  },
+  "20": {
+    "file": "10-press.txt",
+    "A": "with",
+    "B": "without"
+  },
+  "21": {
+    "file": "11-newsletter.txt",
+    "A": "with",
+    "B": "original"
+  },
+  "22": {
+    "file": "11-newsletter.txt",
+    "A": "with",
+    "B": "without"
+  },
+  "23": {
+    "file": "12-memo.txt",
+    "A": "original",
+    "B": "with"
+  },
+  "24": {
+    "file": "12-memo.txt",
+    "A": "with",
+    "B": "without"
+  },
+  "25": {
+    "file": "13-case.txt",
+    "A": "original",
+    "B": "with"
+  },
+  "26": {
+    "file": "13-case.txt",
+    "A": "with",
+    "B": "without"
+  },
+  "27": {
+    "file": "14-event.txt",
+    "A": "original",
+    "B": "with"
+  },
+  "28": {
+    "file": "14-event.txt",
+    "A": "without",
+    "B": "with"
+  },
+  "29": {
+    "file": "15-faq.txt",
+    "A": "original",
+    "B": "with"
+  },
+  "30": {
+    "file": "15-faq.txt",
+    "A": "without",
+    "B": "with"
+  },
+  "31": {
+    "file": "16-update.txt",
+    "A": "original",
+    "B": "with"
+  },
+  "32": {
+    "file": "16-update.txt",
+    "A": "without",
+    "B": "with"
+  }
+}

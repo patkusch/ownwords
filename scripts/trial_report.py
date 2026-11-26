@@ -23,7 +23,7 @@ for original in sorted((TRIAL / "with").glob("*.original.txt")):
     before = original.read_text(encoding="utf-8")
     row = {"file": name, "set": "tune" if name[:2] <= "08" else "held",
            "original": {"words": words(before), "signs": tells.score(before)["per_1000_words"]}}
-    for arm in ("with", "without"):
+    for arm in ("with", "without", "quirks"):
         path = TRIAL / arm / name
         if not path.exists():
             continue
@@ -35,7 +35,7 @@ for original in sorted((TRIAL / "with").glob("*.original.txt")):
                     "review": [f"{f['kind']}: {f['detail']}" for f in result["review"]]}
     rows.append(row)
 
-for arm in ("with", "without"):
+for arm in ("with", "without", "quirks"):
     done = [r for r in rows if arm in r]
     print(f"\n{arm} the skill: {len(done)} rewrites")
     for verdict in ("pass", "review", "fail"):

@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from ownwords import claims, facts, tells  # noqa: E402
+from ownwords import claims, facts, quirks, tells  # noqa: E402
 from ownwords.cli import check  # noqa: E402
 
 
@@ -128,6 +128,38 @@ class Tells(unittest.TestCase):
             self.assertLess(datetime.date.fromisoformat(tell["added"]),
                             datetime.date.fromisoformat(tell["review_by"]), tell["id"])
             self.assertIn(tell["evidence"], {"certain", "measured", "catalogue"})
+
+
+class Quirks(unittest.TestCase):
+    TEXT = ("However, the pilot ran from 3 March 2025 across 12 clinics, and it's fair to say "
+            "the staff liked it. Dr. Amara Osei said the results \"suggest that the effect is real\" "
+            "and that waits may fall by about 15%. I think the team did well because the plan was "
+            "simple. See https://example.org/the-report for the full story.")
+
+    def test_slips_are_added_and_listed(self):
+        changed, notes = quirks.add(self.TEXT, seed=1, every=20)
+        self.assertNotEqual(changed, self.TEXT)
+        self.assertGreaterEqual(len(notes), 2)
+
+    def test_same_seed_same_result(self):
+        self.assertEqual(quirks.add(self.TEXT, seed=3), quirks.add(self.TEXT, seed=3))
+
+    def test_facts_and_claims_survive_every_seed(self):
+        for seed in range(40):
+            changed, _ = quirks.add(self.TEXT, seed=seed, every=10)
+            self.assertEqual(check(self.TEXT, changed)["verdict"], "pass", (seed, changed))
+            for kept in ("3 March 2025", "12 clinics", "Dr. Amara Osei", "about 15%", "may fall",
+                         "\"suggest that the effect is real\"", "https://example.org/the-report"):
+                self.assertIn(kept, changed, seed)
+
+    def test_real_rewrites_still_pass_the_lock(self):
+        for path in sorted((ROOT / "evals" / "trial" / "with").glob("[0-9]*.txt")):
+            if path.name.endswith(".original.txt"):
+                continue
+            text = path.read_text(encoding="utf-8")
+            for seed in range(5):
+                changed, _ = quirks.add(text, seed=seed, every=40)
+                self.assertEqual(check(text, changed)["verdict"], "pass", (path.name, seed))
 
 
 class Regressions(unittest.TestCase):

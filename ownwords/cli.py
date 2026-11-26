@@ -4,6 +4,7 @@
   ownwords score FILE           which signs of machine drafting are in this text?
   ownwords tells                list the signs, their sources and check dates
   ownwords kept REWRITE FINAL   record what the person changed in a rewrite
+  ownwords quirks FILE          add a few small human slips, never to a fact
 """
 from __future__ import annotations
 
@@ -15,7 +16,7 @@ import re
 import sys
 from pathlib import Path
 
-from . import __version__, claims, facts, tells
+from . import __version__, claims, facts, quirks, tells
 
 EXIT_OK, EXIT_FAIL, EXIT_USAGE, EXIT_REVIEW = 0, 1, 2, 3
 
@@ -134,7 +135,33 @@ def main(argv: list[str] | None = None) -> int:
     p_kept.add_argument("--log", default=".ownwords/kept.jsonl",
                         help="file to add the record to (default: .ownwords/kept.jsonl)")
 
+    p_quirks = sub.add_parser("quirks", help="add a few small human slips, never to a fact")
+    p_quirks.add_argument("file")
+    p_quirks.add_argument("-o", "--out", help="where to save the result (default: print it)")
+    p_quirks.add_argument("--seed", type=int, default=0, help="change this to get different slips")
+    p_quirks.add_argument("--every", type=int, default=90, metavar="WORDS",
+                          help="roughly one slip per this many words (default 90)")
+
     args = parser.parse_args(argv)
+
+    if args.command == "quirks":
+        try:
+            original = _read(args.file)
+        except OSError as error:
+            print(error, file=sys.stderr)
+            return EXIT_USAGE
+        changed, notes = quirks.add(original, seed=args.seed, every=args.every)
+        if check(original, changed)["verdict"] != "pass":
+            print("A slip would have touched a fact, so nothing was changed.", file=sys.stderr)
+            changed, notes = original, []
+        if args.out:
+            Path(args.out).write_text(changed, encoding="utf-8")
+        else:
+            print(changed, end="")
+        print(f"{len(notes)} slips added on purpose:", file=sys.stderr)
+        for note in notes:
+            print("  " + note, file=sys.stderr)
+        return EXIT_OK
 
     if args.command == "kept":
         try:
