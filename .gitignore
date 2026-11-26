@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.ownwords/
+.DS_Store
+*.egg-info/
+build/
+dist/

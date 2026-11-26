@@ -1,0 +1,13 @@
+## Dunmore Plumbing: A Cautious Embrace of Online Booking
+
+**Case Study: March 2026**
+
+Dunmore Plumbing, a family-run firm employing 11 individuals and operated by owner Colm Dunmore, implemented an online booking system on March 1st, 2026, aiming to streamline their service scheduling and improve customer convenience. Prior to this, Colm and his team relied solely on phone calls for appointment requests, a process proving increasingly inefficient.
+
+The initial rollout was met with some skepticism from Colm, who expressed concerns about associated fees. Despite this, the system was activated, offering customers 24/7 access to view available slots and book appointments. 
+
+Within the first month, the impact was immediately noticeable. Crucially, the number of missed calls plummeted from approximately 40 per week to a significantly reduced 12. However, a key observation was that no-shows remained consistent – suggesting the booking system hadn’t fundamentally altered customer behaviour. 
+
+Perhaps the most significant change was the rise in bookings outside of standard office hours, now accounting for a substantial 28% of the total bookings.  Colm remains cautiously optimistic, stating, “I was sceptical and I am still not sure about the fees," highlighting the ongoing need to assess the system’s long-term value and potential for return on investment. 
+
+**Key Takeaway:** While Dunmore Plumbing experienced a clear improvement in appointment management efficiency, the owner's initial reservations underscore the importance of careful cost-benefit analysis when adopting new technologies.

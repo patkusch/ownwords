@@ -1,0 +1,13 @@
+**Excited to Share My New Skills! 🎉**
+
+I’m thrilled to announce the completion of my Data Analyst course at Northgate College! The 14-week evening program equipped me with a robust skillset in data analysis, visualization, and reporting – and I’m eager to put it to use.
+
+During the course, I tackled a fascinating real-world project: analyzing bus delays in Manchester. I worked with 1.2 million rows of publicly available data and developed a dynamic dashboard to visualize the trends. 
+
+My initial findings were quite insightful – I discovered a significant correlation, approximately 30%, between rainy days and increased bus delays. While my data is currently limited to one winter season, it highlights a clear area for further investigation. 
+
+I'm now actively seeking a junior Data Analyst role in Manchester, where I can contribute my analytical abilities and passion for data-driven solutions.  I'm particularly interested in opportunities within [mention industry interest - e.g., transport, logistics]. 
+
+#DataAnalysis #DataAnalyst #ManchesterJobs #NorthgateCollege #Skills #CareerOpportunity 
+
+[Link to Portfolio/Dashboard (if available)]

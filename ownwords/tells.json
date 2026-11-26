@@ -1,0 +1,293 @@
+{
+  "about": "Signs that a text was machine-drafted. Every sign has a source, the date it was added and a date by which it must be checked again. A sign past its check date is not scored.",
+  "wikipedia": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+  "tells": [
+    {
+      "id": "chatbot-leftover",
+      "label": "Chatbot leftovers",
+      "why": "Words meant for the person chatting, left in the text by mistake.",
+      "evidence": "certain",
+      "weight": 5,
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+      "added": "2026-11-26",
+      "review_by": "2027-11-26",
+      "patterns": [
+        "\\bI hope this (?:helps|email finds you well)\\b",
+        "\\bas an AI(?: language model| assistant)?\\b",
+        "\\b(?:Certainly|Absolutely|Of course|Sure)[!,] (?:here|I)\\b",
+        "\\bGreat question\\b",
+        "\\blet me know if you(?:'d| would) like\\b",
+        "\\bHere(?:'s| is) (?:a|an|the|your) (?:revised|rewritten|polished|updated|draft|breakdown|overview|summary)\\b",
+        "\\bas of my (?:last|latest) (?:knowledge )?(?:update|training)\\b",
+        "oaicite|turn0search|utm_source=chatgpt\\.com|contentReference",
+        "\\bWould you like me to\\b",
+        "\\b(?:Okay|Ok|Sure|Certainly|Absolutely),? here(?:'s|’s| is)\\b",
+        "\\bHere(?:'s|’s| is) (?:a|an|the|your) [^.\\n]{0,40}?\\b(?:draft|version|post|email|summary|description|paragraph)\\b",
+        "\\[(?:Insert|Link to|Mention|Your|Add|Company|Name|Date)\\b[^\\]\\n]{0,60}\\]"
+      ]
+    },
+    {
+      "id": "trailing-ing",
+      "label": "Tacked-on \"-ing\" comment",
+      "why": "A sentence that ends with a comma and an \"-ing\" word that only comments on what was just said.",
+      "evidence": "measured",
+      "weight": 2,
+      "source": "https://arxiv.org/abs/2410.16107",
+      "added": "2026-11-26",
+      "review_by": "2027-11-26",
+      "patterns": [
+        ",\\s+(?:thereby |thus |further |ultimately )?(?:highlighting|underscoring|emphasizing|emphasising|reflecting|showcasing|ensuring|fostering|demonstrating|illustrating|signaling|signalling|cementing|solidifying|reinforcing|paving the way|contributing to|making it (?:a|an|one))\\b"
+      ]
+    },
+    {
+      "id": "inflated-importance",
+      "label": "Inflated importance",
+      "why": "Telling the reader a thing is significant without saying what it did.",
+      "evidence": "catalogue",
+      "weight": 2,
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+      "added": "2026-11-26",
+      "review_by": "2027-11-26",
+      "patterns": [
+        "\\b(?:stands|serves|acts) as a (?:testament|reminder|beacon|cornerstone)\\b",
+        "\\ba testament to\\b",
+        "\\bplays? an? (?:pivotal|crucial|vital|key|significant|important) role\\b",
+        "\\brich (?:tapestry|cultural heritage|history and)\\b",
+        "\\b(?:enduring|lasting) (?:legacy|impact)\\b",
+        "\\bindelible mark\\b",
+        "\\b(?:ever-evolving|rapidly evolving|ever-changing) (?:landscape|world)\\b",
+        "\\bpivotal moment\\b",
+        "\\bunderscor(?:es|ing) (?:the|its|their) (?:importance|significance)\\b",
+        "\\bin today's (?:fast-paced|digital|modern) (?:world|age|landscape)\\b",
+        "\\bgame[- ]changer\\b",
+        "\\bunlock(?:s|ing)? the (?:full )?potential\\b"
+      ]
+    },
+    {
+      "id": "not-just-but",
+      "label": "\"Not just X, but Y\"",
+      "why": "Knocking down a point nobody made in order to sound deeper.",
+      "evidence": "catalogue",
+      "weight": 2,
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+      "added": "2026-11-26",
+      "review_by": "2027-11-26",
+      "patterns": [
+        "\\b(?:not|n['’]t) (?:just|only|merely|simply) [^.!?\\n]{1,80}?(?:,|;| —| -|\\.)\\s*(?:but|it(?:'s|’s| is)|they(?:'re|’re| are)|this is)\\b",
+        "\\b(?:it|this|that)(?:'s|’s| is) not (?:about )?[^.!?\\n]{1,60}?[.,;—-]+\\s*(?:it|this|that)(?:'s|’s| is)\\b",
+        "\\bmore than just\\b",
+        "\\bno longer just\\b"
+      ]
+    },
+    {
+      "id": "vague-source",
+      "label": "Unnamed sources",
+      "why": "Crediting a claim to nobody in particular.",
+      "evidence": "catalogue",
+      "weight": 2,
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+      "added": "2026-11-26",
+      "review_by": "2027-05-26",
+      "patterns": [
+        "\\b(?:experts|observers|critics|analysts|researchers|scholars) (?:argue|say|believe|note|suggest|agree|have noted)\\b",
+        "\\b(?:studies|research) (?:shows?|suggests?|indicates?|has shown|have shown)\\b",
+        "\\bindustry reports\\b",
+        "\\bit is widely (?:regarded|recognized|recognised|believed|accepted)\\b",
+        "\\bmany (?:people )?(?:believe|argue)\\b"
+      ]
+    },
+    {
+      "id": "important-to-note",
+      "label": "\"It is important to note\"",
+      "why": "Telling the reader a point matters before making it.",
+      "evidence": "catalogue",
+      "weight": 1,
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+      "added": "2026-11-26",
+      "review_by": "2027-05-26",
+      "patterns": [
+        "\\bit(?:'s|’s| is) (?:important|worth|crucial|essential) to (?:note|remember|acknowledge|recognize|recognise|understand|consider)\\b",
+        "\\bit (?:is worth noting|should be noted)\\b"
+      ]
+    },
+    {
+      "id": "stock-ending",
+      "label": "Stock ending",
+      "why": "A closing line that sums up or looks ahead in a set formula.",
+      "evidence": "catalogue",
+      "weight": 1,
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+      "added": "2026-11-26",
+      "review_by": "2027-05-26",
+      "patterns": [
+        "\\bdespite (?:these|its|their|the) (?:challenges|setbacks|obstacles)\\b",
+        "\\bfuture (?:outlook|prospects)\\b",
+        "(?m)^\\s*(?:In conclusion|In summary|To sum up|Ultimately|Overall),",
+        "\\bcontinues to (?:evolve|thrive|inspire|shape)\\b",
+        "\\bthe (?:future|journey) (?:looks|is|remains) (?:bright|promising|just beginning)\\b"
+      ]
+    },
+    {
+      "id": "serves-as",
+      "label": "Dodging \"is\"",
+      "why": "\"Serves as\" or \"boasts\" where \"is\" or \"has\" would do.",
+      "evidence": "catalogue",
+      "weight": 1,
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+      "added": "2026-11-26",
+      "review_by": "2027-05-26",
+      "patterns": [
+        "\\b(?:serves|stands|functions) as (?:a|an|the)\\b",
+        "\\bboasts (?:a|an|the|over|more|\\d)\\b"
+      ]
+    },
+    {
+      "id": "bold-label-list",
+      "label": "Bold-label bullet list",
+      "why": "A list where every bullet opens with a bold phrase and a colon.",
+      "evidence": "catalogue",
+      "weight": 1,
+      "min_hits": 3,
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing",
+      "added": "2026-11-26",
+      "review_by": "2027-11-26",
+      "patterns": [
+        "(?m)^\\s*(?:[-*•]|\\d+\\.)\\s+\\*\\*[^*\\n]{2,60}\\*\\*\\s*[:–—-]"
+      ]
+    },
+    {
+      "id": "word-cluster",
+      "label": "Cluster of overused words",
+      "why": "Several words that chat models use far more than people do, appearing together. One or two on their own mean nothing.",
+      "evidence": "measured",
+      "weight": 1,
+      "min_distinct": 3,
+      "source": "https://arxiv.org/abs/2406.07016",
+      "added": "2026-11-26",
+      "review_by": "2027-05-26",
+      "eras": {
+        "2023 to mid-2024": [
+          "additionally",
+          "boasts",
+          "bolstered",
+          "crucial",
+          "delve",
+          "delves",
+          "delving",
+          "emphasizing",
+          "enduring",
+          "garner",
+          "garnered",
+          "intricate",
+          "intricacies",
+          "interplay",
+          "landscape",
+          "meticulously",
+          "meticulous",
+          "pivotal",
+          "underscore",
+          "underscores",
+          "underscoring",
+          "tapestry",
+          "testament",
+          "vibrant"
+        ],
+        "mid-2024 to mid-2025": [
+          "align with",
+          "aligns with",
+          "bolstered",
+          "crucial",
+          "emphasizing",
+          "enhance",
+          "enhances",
+          "enhancing",
+          "enduring",
+          "fostering",
+          "highlighting",
+          "pivotal",
+          "showcasing",
+          "underscore",
+          "vibrant"
+        ],
+        "mid-2025 to mid-2026": [
+          "emphasizing",
+          "enhance",
+          "highlighting",
+          "showcasing"
+        ],
+        "mid-2026 on": [
+          "dependable",
+          "echoed",
+          "foster",
+          "fosters",
+          "leverage",
+          "leverages",
+          "leveraging",
+          "multifaceted",
+          "prioritize",
+          "prioritizes",
+          "quietly",
+          "steady",
+          "universally"
+        ],
+        "undated watch list": [
+          "deep dive",
+          "robust",
+          "showcase",
+          "showcases"
+        ]
+      },
+      "left_out": [
+        "key",
+        "valuable",
+        "challenge",
+        "clearer",
+        "practical",
+        "matters"
+      ],
+      "left_out_why": "On the Wikipedia list, but too common in ordinary human writing to count. That is this project's judgement, not Wikipedia's."
+    }
+  ],
+  "do_not_enforce": [
+    {
+      "sign": "A dash on its own",
+      "why": "In one small count, human essays ranged from 0.33 to 17.12 dashes per 1,000 words. Wikipedia lists dash overuse as a past sign that ended in September 2026.",
+      "source": "https://arxiv.org/html/2603.27006v1"
+    },
+    {
+      "sign": "Perfect grammar",
+      "why": "Wikipedia lists it as a sign that does not work.",
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing"
+    },
+    {
+      "sign": "Linking words such as \"however\" and \"moreover\"",
+      "why": "Wikipedia lists them as a sign that does not work.",
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing"
+    },
+    {
+      "sign": "Plain or formal vocabulary",
+      "why": "Detectors flagged about 61 in 100 essays by people writing English as a second language.",
+      "source": "https://arxiv.org/abs/2304.02819"
+    },
+    {
+      "sign": "One or two overused words",
+      "why": "Wikipedia says one or two may be coincidence. Only a cluster counts.",
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing"
+    },
+    {
+      "sign": "Even sentence lengths",
+      "why": "The evidence is weak and mixed.",
+      "source": "https://arxiv.org/pdf/2308.09067"
+    },
+    {
+      "sign": "Curly quotation marks",
+      "why": "Word processors add them for everyone.",
+      "source": "https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing"
+    },
+    {
+      "sign": "Any AI-detector score",
+      "why": "Detectors are easy to fool and wrongly flag real people.",
+      "source": "https://arxiv.org/abs/2405.07940"
+    }
+  ]
+}

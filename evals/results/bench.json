@@ -1,0 +1,411 @@
+{
+  "planted": [
+    {
+      "plant": "A number changed",
+      "tried": 31,
+      "failed": 31,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "A percent sign dropped",
+      "tried": 8,
+      "failed": 8,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "A month changed",
+      "tried": 14,
+      "failed": 14,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "A name changed",
+      "tried": 31,
+      "failed": 31,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "A word changed inside a quotation",
+      "tried": 12,
+      "failed": 12,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "A link changed",
+      "tried": 3,
+      "failed": 3,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "A citation removed",
+      "tried": 0,
+      "failed": 0,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "A word of doubt removed",
+      "tried": 17,
+      "failed": 17,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "\"About\" or \"at least\" removed from a figure",
+      "tried": 12,
+      "failed": 12,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "A \"not\" added or removed",
+      "tried": 29,
+      "failed": 29,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "\"Definitely\" or \"always\" added",
+      "tried": 29,
+      "failed": 1,
+      "flagged_for_review": 28,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "A sentence with an invented fact added",
+      "tried": 32,
+      "failed": 32,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "A sentence holding a number removed",
+      "tried": 31,
+      "failed": 31,
+      "flagged_for_review": 0,
+      "missed": 0,
+      "missed_in": []
+    },
+    {
+      "plant": "Two numbers swapped with each other",
+      "tried": 30,
+      "failed": 11,
+      "flagged_for_review": 0,
+      "missed": 19,
+      "missed_in": [
+        "wiki-ada-lovelace.txt",
+        "wiki-beekeeping.txt",
+        "wiki-bicycle.txt",
+        "wiki-bread.txt",
+        "wiki-compost.txt"
+      ]
+    },
+    {
+      "plant": "A sentence with no hard fact removed",
+      "tried": 17,
+      "failed": 2,
+      "flagged_for_review": 2,
+      "missed": 13,
+      "missed_in": [
+        "wiki-beekeeping.txt",
+        "wiki-bread.txt",
+        "wiki-canal.txt",
+        "wiki-compost.txt",
+        "wiki-lighthouse.txt"
+      ]
+    },
+    {
+      "plant": "A vague sentence with no fact added",
+      "tried": 32,
+      "failed": 1,
+      "flagged_for_review": 0,
+      "missed": 31,
+      "missed_in": [
+        "wiki-ada-lovelace.txt",
+        "wiki-beekeeping.txt",
+        "wiki-bicycle.txt",
+        "wiki-bread.txt",
+        "wiki-canal.txt"
+      ]
+    }
+  ],
+  "signs": [
+    {
+      "set": "human",
+      "file": "wiki-ada-lovelace.txt",
+      "words": 511,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-beekeeping.txt",
+      "words": 490,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-bicycle.txt",
+      "words": 485,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-bread.txt",
+      "words": 492,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-canal.txt",
+      "words": 557,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-compost.txt",
+      "words": 484,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-great-fire-of-london.txt",
+      "words": 559,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-lighthouse.txt",
+      "words": 470,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-marie-curie.txt",
+      "words": 476,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-photosynthesis.txt",
+      "words": 527,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-printing-press.txt",
+      "words": 467,
+      "per_1000_words": 4.3,
+      "signs": {
+        "trailing-ing": 1
+      }
+    },
+    {
+      "set": "human",
+      "file": "wiki-sourdough.txt",
+      "words": 520,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-suez-canal.txt",
+      "words": 506,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-tide.txt",
+      "words": 461,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-tram.txt",
+      "words": 578,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "human",
+      "file": "wiki-windmill.txt",
+      "words": 449,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "ai",
+      "file": "01-email.txt",
+      "words": 185,
+      "per_1000_words": 27.0,
+      "signs": {
+        "chatbot-leftover": 1
+      }
+    },
+    {
+      "set": "ai",
+      "file": "02-readme.txt",
+      "words": 154,
+      "per_1000_words": 32.5,
+      "signs": {
+        "chatbot-leftover": 1
+      }
+    },
+    {
+      "set": "ai",
+      "file": "03-report.txt",
+      "words": 216,
+      "per_1000_words": 46.3,
+      "signs": {
+        "chatbot-leftover": 1,
+        "trailing-ing": 2,
+        "important-to-note": 1
+      }
+    },
+    {
+      "set": "ai",
+      "file": "04-blog.txt",
+      "words": 240,
+      "per_1000_words": 62.5,
+      "signs": {
+        "chatbot-leftover": 3
+      }
+    },
+    {
+      "set": "ai",
+      "file": "05-product.txt",
+      "words": 157,
+      "per_1000_words": 31.8,
+      "signs": {
+        "chatbot-leftover": 1
+      }
+    },
+    {
+      "set": "ai",
+      "file": "06-linkedin.txt",
+      "words": 230,
+      "per_1000_words": 87.0,
+      "signs": {
+        "chatbot-leftover": 4
+      }
+    },
+    {
+      "set": "ai",
+      "file": "07-cover.txt",
+      "words": 189,
+      "per_1000_words": 10.6,
+      "signs": {
+        "inflated-importance": 1
+      }
+    },
+    {
+      "set": "ai",
+      "file": "08-meeting.txt",
+      "words": 180,
+      "per_1000_words": 55.6,
+      "signs": {
+        "chatbot-leftover": 2
+      }
+    },
+    {
+      "set": "ai",
+      "file": "09-abstract.txt",
+      "words": 230,
+      "per_1000_words": 26.1,
+      "signs": {
+        "chatbot-leftover": 1,
+        "important-to-note": 1
+      }
+    },
+    {
+      "set": "ai",
+      "file": "10-press.txt",
+      "words": 204,
+      "per_1000_words": 58.8,
+      "signs": {
+        "chatbot-leftover": 2,
+        "trailing-ing": 1
+      }
+    },
+    {
+      "set": "ai",
+      "file": "11-newsletter.txt",
+      "words": 166,
+      "per_1000_words": 30.1,
+      "signs": {
+        "chatbot-leftover": 1
+      }
+    },
+    {
+      "set": "ai",
+      "file": "12-memo.txt",
+      "words": 210,
+      "per_1000_words": 23.8,
+      "signs": {
+        "chatbot-leftover": 1
+      }
+    },
+    {
+      "set": "ai",
+      "file": "13-case.txt",
+      "words": 229,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "ai",
+      "file": "14-event.txt",
+      "words": 148,
+      "per_1000_words": 0.0,
+      "signs": {}
+    },
+    {
+      "set": "ai",
+      "file": "15-faq.txt",
+      "words": 228,
+      "per_1000_words": 48.2,
+      "signs": {
+        "chatbot-leftover": 2,
+        "important-to-note": 1
+      }
+    },
+    {
+      "set": "ai",
+      "file": "16-update.txt",
+      "words": 185,
+      "per_1000_words": 27.0,
+      "signs": {
+        "chatbot-leftover": 1
+      }
+    }
+  ]
+}
