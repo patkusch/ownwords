@@ -115,6 +115,10 @@ python3 <this skill's folder>/scripts/ownwords check original.txt rewrite.txt
 - **FAIL:** something that must not change has changed. Fix the rewrite and run the check again. Do not hand over a failing rewrite.
 - **REVIEW:** no fact changed, but the script saw something worth a look, such as much shorter text. Check each point. Fix it, or keep it and tell the person.
 
+A comment tacked on the end of a sentence sometimes carries a real claim, such as a cause. Keep the claim as a plain clause. Do not cut it.
+
+If the original holds a mistake of its own, such as two dates that disagree or a repeated word, do not fix a fact yourself. Keep it, and ask the person. A plainly repeated word may be fixed, and you say so.
+
 Sometimes a finding is a false alarm. The usual case is that you removed "not just X, but Y" and the count of "not" words changed. Only when you are sure the meaning is the same, run the check again with a stated reason:
 
 ```bash
@@ -123,7 +127,7 @@ python3 <this skill's folder>/scripts/ownwords check original.txt rewrite.txt --
 
 The name to put after `--waive` is the word in brackets at the end of each finding. Every waiver is printed in the report. Repeat every waiver to the person, in your own words.
 
-Never waive a lost or added number, date, quote, link or citation. Restore it. A `name-lost` or `name-added` finding may be waived only when the word is plainly an ordinary word with a capital letter, such as the first word of a label, and never when it is a person, place, product or organisation.
+Never waive a lost or added number, date, quote, link or citation. Restore it. A `doubt-removed` finding may be waived only when two words of doubt sat on the same verb and one remains, as in "could potentially" cut to "could". A `name-lost` or `name-added` finding may be waived only when the word is plainly an ordinary word with a capital letter, such as the first word of a label, and never when it is a person, place, product or organisation.
 
 The script cannot see everything. It does not notice two numbers swapped with each other, a fact moved onto the wrong subject, or a sentence whose meaning changed without any of its key words changing. Read your rewrite against the original once more yourself, sentence by sentence.
 

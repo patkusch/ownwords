@@ -95,12 +95,13 @@ def compare(before: str, after: str) -> list[str]:
     """Say in plain words whether the rewrite got plainer or heavier."""
     a, b = measure(before), measure(after)
     notes = []
-    for key, label in (("words_per_sentence", "words per sentence"),
-                       ("long_words_percent", "long words, percent"),
-                       ("heavy_per_1000_words", "heavy words and phrases per 1,000 words"),
-                       ("sentences_over_30_words", "sentences over 30 words")):
-        if b[key] > a[key]:
+    # A change smaller than the step is noise and is not reported.
+    for key, label, step in (("words_per_sentence", "words per sentence", 1.0),
+                             ("long_words_percent", "long words, percent", 1.0),
+                             ("heavy_per_1000_words", "heavy words and phrases per 1,000 words", 2.0),
+                             ("sentences_over_30_words", "sentences over 30 words", 1)):
+        if b[key] - a[key] >= step:
             notes.append(f"heavier: {label} went from {a[key]} to {b[key]}")
-        elif b[key] < a[key]:
+        elif a[key] - b[key] >= step:
             notes.append(f"plainer: {label} went from {a[key]} to {b[key]}")
     return notes

@@ -720,6 +720,294 @@
       "order_2": "quirks",
       "winner": "quirks",
       "position_bias": false
+    },
+    {
+      "file": "01-email.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "plain",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "01-email.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "original",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "02-readme.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "plain",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "02-readme.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "original",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "03-report.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "plain",
+      "winner": "tie",
+      "position_bias": false
+    },
+    {
+      "file": "03-report.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "original",
+      "order_2": "plain",
+      "winner": "tie",
+      "position_bias": false
+    },
+    {
+      "file": "04-blog.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "04-blog.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "plain",
+      "winner": "plain",
+      "position_bias": false
+    },
+    {
+      "file": "05-product.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "plain",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "05-product.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "original",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "06-linkedin.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "06-linkedin.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "plain",
+      "winner": "plain",
+      "position_bias": false
+    },
+    {
+      "file": "07-cover.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "07-cover.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "original",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "08-meeting.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "plain",
+      "winner": "tie",
+      "position_bias": false
+    },
+    {
+      "file": "08-meeting.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "plain",
+      "winner": "plain",
+      "position_bias": false
+    },
+    {
+      "file": "09-abstract.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "plain",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "09-abstract.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "original",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "10-press.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "10-press.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "plain",
+      "winner": "plain",
+      "position_bias": false
+    },
+    {
+      "file": "11-newsletter.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "11-newsletter.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "plain",
+      "winner": "plain",
+      "position_bias": false
+    },
+    {
+      "file": "12-memo.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "plain",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "12-memo.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "original",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "13-case.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "plain",
+      "winner": "tie",
+      "position_bias": false
+    },
+    {
+      "file": "13-case.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "original",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "14-event.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "plain",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "14-event.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "plain",
+      "winner": "plain",
+      "position_bias": false
+    },
+    {
+      "file": "15-faq.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "plain",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "15-faq.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "original",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "16-update.txt",
+      "first": "plain",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "16-update.txt",
+      "first": "plain",
+      "second": "original",
+      "order_1": "plain",
+      "order_2": "plain",
+      "winner": "plain",
+      "position_bias": false
     }
   ],
   "summary": {
@@ -756,6 +1044,20 @@
       "quirks": 4,
       "original": 4,
       "tie": 8,
+      "picked_whichever_came_first": 8
+    },
+    "plain vs with": {
+      "pairs": 16,
+      "plain": 0,
+      "with": 6,
+      "tie": 10,
+      "picked_whichever_came_first": 7
+    },
+    "plain vs original": {
+      "pairs": 16,
+      "plain": 7,
+      "original": 0,
+      "tie": 9,
       "picked_whichever_came_first": 8
     }
   }

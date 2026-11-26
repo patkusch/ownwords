@@ -1,0 +1,7 @@
+Researchers Chen and Abara studied whether a breathing app could help people with mild insomnia fall asleep faster. They recruited 412 adults with mild insomnia who were having difficulty falling asleep. They were split into two groups. Half used a breathing app designed to promote relaxation and induce sleep. The other half continued with their usual sleep routines.
+
+For eight weeks, the app group followed the app’s guided breathing exercises before bed. At the end of the eight weeks, the group using the breathing app fell asleep an average of nine minutes faster than the control group. This suggests a small but measurable benefit for sleep onset.
+
+The study has some key limitations. It didn’t track participants for longer than eight weeks, so it’s unknown whether this benefit would last. Also, 37 participants dropped out of the study, which could have introduced some bias into the results.
+
+The findings give a preliminary indication that breathing exercises delivered through a mobile app might be a simple and accessible tool for mild insomnia. Further research with longer-term follow-up is needed to confirm these results and understand the long-term effectiveness of this approach.

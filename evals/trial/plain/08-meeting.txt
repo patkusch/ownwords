@@ -1,0 +1,9 @@
+**Meeting Summary – November 9, 2026**
+
+The team met to discuss the app release, which has been officially pushed back to December 15th, 2026, because of ongoing stabilization work. There are seven open bugs. Two are critical and need immediate attention.
+
+Lena Fischer is investigating the persistent login bug. She suspects it may be linked to the recently added caching system. She hasn’t confirmed this yet, and she's prioritizing further testing.
+
+Tariq Aziz’s availability is a concern. Tariq will be unavailable from November 20th to 24th, which will affect progress on bug fixes and could delay testing.
+
+The team agreed to prioritize the critical bugs and to speed up Lena’s investigation into the login issue. Sam Ortiz will coordinate with Tariq to make sure responsibilities are handed over smoothly before his absence, and will monitor overall progress closely. A follow-up meeting is scheduled for November 12th to review progress.

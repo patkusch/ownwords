@@ -129,6 +129,8 @@ A blind reader saw two versions of each document with no labels and picked one. 
 | Rewrite without the skill against the machine draft | 2 | 1 | 13 |
 | Habits and slips against the clean skill rewrite | 1 | 10 | 5 |
 | Habits and slips against the machine draft | 4 | 4 | 8 |
+| Plain words and habits against the earlier skill rewrite | 0 | 6 | 10 |
+| Plain words and habits against the machine draft | 7 | 0 | 9 |
 
 What this says:
 
@@ -136,11 +138,30 @@ What this says:
 - **This reader cannot separate the two rewrites.** In 13 of 16 pairs it simply picked whichever version it saw first.
 - **Deliberate slips lost.** The version with misspellings and dropped commas lost to the clean rewrite 10 to 1, and only drew with the machine draft.
 
+- **The newer skill did not beat the older one.** With the plain-words step and human habits added, the rewrite still beat the machine draft 7 to 0, but lost to the first version of the skill 6 to 0 with 10 ties. Both newer versions include the human habits, and both lost, so the habits are the first suspect. The two were not tested apart, and the newer rewrites are also longer (87% of the words kept against 78%).
+
 A small model is a poor stand-in for a person, and a model may punish typos more than a human reader would. To judge for yourself, [evals/reader/sheet.md](evals/reader/sheet.md) holds 32 unlabelled pairs:
 
 ```bash
 python3 scripts/reader_test.py tally your-answers.txt
 ```
+
+## Plain words
+
+Machine drafts use heavy words and hide verbs inside nouns. The skill swaps them for everyday words, and `ownwords score` lists them with a plainer word for each. `ownwords check` says whether a rewrite came out plainer or heavier.
+
+All 16 documents together:
+
+| Version | Words per sentence | Long words | Heavy phrases per 1,000 words | Sentences over 30 words |
+|---|---|---|---|---|
+| Machine draft | 14.9 | 18.7% | 12.8 | 4 |
+| Skill before this step | 12.5 | 13.1% | 4.6 | 1 |
+| Skill with plain words | 12.2 | 12.6% | 1.3 | 0 |
+| Rewrite without the skill | 10.6 | 4.3% | 0.0 | 0 |
+
+A long word has nine letters or more. With the plain-words step, 13 of 16 rewrites passed the fact lock outright, and the other 3 were known false alarms. The rewrite without the skill is plainest of all, and it is also the one that changed a fact or claim in 14 of 16 drafts.
+
+The heavy-word list is this project's own. Fewer heavy words did not make the blind reader prefer the text, as the table above shows.
 
 ## Human habits and small slips
 
@@ -178,7 +199,7 @@ When you edit a rewrite, `ownwords kept` records which sentences you changed. Tu
 ## Not built yet
 
 - A reader test with people. The blind sheet exists, but only a model has judged so far.
-- A plain-words step. The skill cuts padding, but it does not yet go after heavy words or tangled sentences, and nothing measures them.
+- A trial that tests the plain-words step and the human habits apart, to find which one the reader marked down.
 - Scoring a rewrite against samples of your own writing. The skill uses your samples, but nothing measures how close it got.
 - Languages other than English. The fact check works on numbers, links and quotations in any language. The signs are English only.
 - Repeat runs of the trial, to measure noise.
