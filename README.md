@@ -144,7 +144,7 @@ python3 scripts/reader_test.py tally your-answers.txt
 
 ## Human habits and small slips
 
-The skill gives a rewrite the habits of someone writing by hand: contractions, uneven sentences, starting with "And" or "But". It can also add a few small mistakes:
+The skill gives a rewrite the habits of someone writing by hand: contractions, uneven sentences, starting with "And" or "But". If you ask for them, it can also add a few small mistakes:
 
 ```bash
 python3 scripts/ownwords quirks rewrite.txt -o final.txt
@@ -152,7 +152,7 @@ python3 scripts/ownwords quirks rewrite.txt -o final.txt
 
 This adds roughly one slip per 90 words: a common misspelling, a dropped apostrophe or comma, two spaces after a full stop. It lists every slip it made. It never touches a number, name, quotation, link, citation, code, heading, or a word that says how sure a claim is, and it checks its own result against the fact lock. In the trial, 13 of 16 rewrites with habits and slips passed the lock outright, and the other 3 were false alarms of the kinds described above.
 
-The reader test above did not favour the slips. They are there because some people want them. The skill always lists them and keeps a clean copy.
+The slips are off unless you ask, because the reader test above went against them 10 to 1. When they are used, the skill lists each one and keeps a clean copy. The habits and the slips were tested together, so the habits have no reading of their own yet.
 
 ## The signs it scores, and the ones it refuses to
 

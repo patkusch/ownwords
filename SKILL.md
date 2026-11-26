@@ -91,7 +91,7 @@ Save your rewrite to a second file and run:
 python3 <this skill's folder>/scripts/ownwords check original.txt rewrite.txt
 ```
 
-- **PASS:** go on to Step 4b.
+- **PASS:** go on to Step 5, or to Step 4b if the person asked for small mistakes.
 - **FAIL:** something that must not change has changed. Fix the rewrite and run the check again. Do not hand over a failing rewrite.
 - **REVIEW:** no fact changed, but the script saw something worth a look, such as much shorter text. Check each point. Fix it, or keep it and tell the person.
 
@@ -107,9 +107,11 @@ Never waive a lost or added number, date, quote, link or citation. Restore it. A
 
 The script cannot see everything. It does not notice two numbers swapped with each other, a fact moved onto the wrong subject, or a sentence whose meaning changed without any of its key words changing. Read your rewrite against the original once more yourself, sentence by sentence.
 
-## Step 4b. Add the small slips
+## Step 4b. Small slips, only if asked
 
-Real writing has small mistakes in it. After the lock passes, add a few:
+Do this step only when the person asks for it: "add typos", "add small mistakes", "make it imperfect", or similar. Otherwise skip it. In a blind reader test, rewrites with slips lost to clean rewrites 10 to 1.
+
+When they do ask, add the slips with the script after the lock passes:
 
 ```bash
 python3 <this skill's folder>/scripts/ownwords quirks rewrite.txt -o final.txt
@@ -117,21 +119,21 @@ python3 <this skill's folder>/scripts/ownwords quirks rewrite.txt -o final.txt
 
 The script adds roughly one slip per 90 words: a common misspelling, a dropped apostrophe or comma, two spaces after a full stop, a small "i". It lists each one. It never touches a number, a name, a quotation, a link, a citation, code, a heading, or a word that says how sure a claim is, and it checks its own result against the lock.
 
-- Add the slips with the script, not by hand. Slips you make yourself can land on a fact.
+- Use the script, not your own hand. Slips you make yourself can land on a fact.
 - Use `--every 150` for a formal document and `--every 60` for a casual message. Use `--seed 2` (or any number) for a different set.
-- **Skip this step** when the person asks for a clean copy, and for code, contracts and legal wording.
-- **Ask first** for a CV, a cover letter, a press release, or anything published under an organisation's name. A typo there can cost the person something. If you cannot ask, add the slips, and say clearly in the hand-over that the clean copy is the safer one for that use.
+- Never add slips to code, contracts or legal wording.
+- For a CV, a cover letter, a press release, or anything published under an organisation's name, say once that a typo there can cost them something, then do as they decide.
 - If a slip lands somewhere it should not, such as a disclaimer, run again with another `--seed`.
-- Keep the clean rewrite too. The person may want it.
+- Keep the clean rewrite too, and list the slips in the hand-over.
 
 ## Step 5. Hand it over
 
 Give, in this order:
 
-1. The rewrite, with the slips in it.
+1. The rewrite.
 2. One line on the check: passed, or passed with these waivers.
 3. What you changed and why, in three to six short points. Name the cause, not the rule number.
-4. The slips that were added on purpose, as the script listed them, and an offer of the clean copy.
+4. If slips were asked for: each slip as the script listed it, and the clean copy.
 5. Anything you left alone on purpose, and any questions: "This line is vague. Do you have the actual figure?"
 
 Do not claim the text is now "undetectable" or "human". Say what you changed.
