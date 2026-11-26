@@ -1,0 +1,434 @@
+[
+  {
+    "file": "01-email.txt",
+    "set": "tune",
+    "original": {
+      "words": 161,
+      "signs": 0.0
+    },
+    "with": {
+      "verdict": "review",
+      "words": 132,
+      "signs": 0.0,
+      "fail": [],
+      "review": [
+        "certainty-added: all"
+      ]
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 132,
+      "signs": 0.0,
+      "fail": [
+        "doubt-removed: indicate",
+        "certainty-added: all",
+        "negation-changed: 2 before, 3 after"
+      ],
+      "review": []
+    }
+  },
+  {
+    "file": "02-readme.txt",
+    "set": "tune",
+    "original": {
+      "words": 154,
+      "signs": 64.9
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 113,
+      "signs": 44.2,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 97,
+      "signs": 0.0,
+      "fail": [
+        "link-lost: https://github.com/your-repo/tidepool",
+        "doubt-removed: may",
+        "negation-changed: 0 before, 2 after"
+      ],
+      "review": []
+    }
+  },
+  {
+    "file": "03-report.txt",
+    "set": "tune",
+    "original": {
+      "words": 194,
+      "signs": 25.8
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 158,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 147,
+      "signs": 0.0,
+      "fail": [
+        "doubt-removed: indicates",
+        "negation-changed: 2 before, 4 after"
+      ],
+      "review": []
+    }
+  },
+  {
+    "file": "04-blog.txt",
+    "set": "tune",
+    "original": {
+      "words": 188,
+      "signs": 0.0
+    },
+    "with": {
+      "verdict": "fail",
+      "words": 127,
+      "signs": 0.0,
+      "fail": [
+        "negation-changed: 1 before, 0 after"
+      ],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 148,
+      "signs": 0.0,
+      "fail": [
+        "quote-lost: it's been incredible to see the difference",
+        "quote-lost: the staff feel more energized and focused",
+        "quote-lost: we're managing, but i'm worried about the pressure"
+      ],
+      "review": []
+    }
+  },
+  {
+    "file": "05-product.txt",
+    "set": "tune",
+    "original": {
+      "words": 141,
+      "signs": 0.0
+    },
+    "with": {
+      "verdict": "fail",
+      "words": 84,
+      "signs": 0.0,
+      "fail": [
+        "negation-changed: 1 before, 0 after"
+      ],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 73,
+      "signs": 0.0,
+      "fail": [
+        "negation-changed: 1 before, 0 after"
+      ],
+      "review": []
+    }
+  },
+  {
+    "file": "06-linkedin.txt",
+    "set": "tune",
+    "original": {
+      "words": 164,
+      "signs": 61.0
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 129,
+      "signs": 77.5,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 115,
+      "signs": 0.0,
+      "fail": [
+        "negation-changed: 0 before, 1 after"
+      ],
+      "review": []
+    }
+  },
+  {
+    "file": "07-cover.txt",
+    "set": "tune",
+    "original": {
+      "words": 157,
+      "signs": 12.7
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 115,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 89,
+      "signs": 0.0,
+      "fail": [
+        "name-lost: Platform"
+      ],
+      "review": []
+    }
+  },
+  {
+    "file": "08-meeting.txt",
+    "set": "tune",
+    "original": {
+      "words": 157,
+      "signs": 0.0
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 134,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "pass",
+      "words": 108,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    }
+  },
+  {
+    "file": "09-abstract.txt",
+    "set": "held",
+    "original": {
+      "words": 218,
+      "signs": 4.6
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 193,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 135,
+      "signs": 0.0,
+      "fail": [
+        "number-added: 2024",
+        "doubt-removed: could, might, preliminary, suggests",
+        "negation-changed: 1 before, 0 after"
+      ],
+      "review": [
+        "how-often-removed: some"
+      ]
+    }
+  },
+  {
+    "file": "10-press.txt",
+    "set": "held",
+    "original": {
+      "words": 179,
+      "signs": 67.0
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 151,
+      "signs": 79.5,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 81,
+      "signs": 0.0,
+      "fail": [
+        "quote-lost: ancient roman artifacts",
+        "quote-lost: local industrial history",
+        "quote-lost: this is a momentous occasion for our community",
+        "quote-lost: we expect around 90,000 visitors in the first year, reflecting the incredible interest in our museum's rich history",
+        "quote-lost: we're thrilled to welcome visitors to explore these exciting new spaces",
+        "quote-added: we expect around 90,000 visitors in the first year",
+        "name-lost: Address",
+        "name-lost: Date",
+        "name-lost: Email",
+        "name-lost: Number",
+        "name-lost: Phone",
+        "name-lost: Roman",
+        "name-lost: State",
+        "name-added: PRESS"
+      ],
+      "review": [
+        "text-halved: 179 words before, 81 after"
+      ]
+    }
+  },
+  {
+    "file": "11-newsletter.txt",
+    "set": "held",
+    "original": {
+      "words": 146,
+      "signs": 0.0
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 111,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "pass",
+      "words": 119,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    }
+  },
+  {
+    "file": "12-memo.txt",
+    "set": "held",
+    "original": {
+      "words": 189,
+      "signs": 26.5
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 161,
+      "signs": 31.1,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 126,
+      "signs": 0.0,
+      "fail": [
+        "number-added: 2",
+        "name-lost: Department",
+        "name-lost: Name",
+        "roughly-removed: approximately, estimated"
+      ],
+      "review": []
+    }
+  },
+  {
+    "file": "13-case.txt",
+    "set": "held",
+    "original": {
+      "words": 229,
+      "signs": 0.0
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 200,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 160,
+      "signs": 0.0,
+      "fail": [
+        "number-added: 3",
+        "negation-changed: 3 before, 6 after"
+      ],
+      "review": [
+        "how-often-removed: most, some"
+      ]
+    }
+  },
+  {
+    "file": "14-event.txt",
+    "set": "held",
+    "original": {
+      "words": 148,
+      "signs": 33.8
+    },
+    "with": {
+      "verdict": "fail",
+      "words": 83,
+      "signs": 0.0,
+      "fail": [
+        "name-lost: Featuring"
+      ],
+      "review": [
+        "how-often-removed: many"
+      ]
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 68,
+      "signs": 0.0,
+      "fail": [
+        "number-lost: 7",
+        "number-added: 3",
+        "name-lost: Featuring",
+        "roughly-removed: over",
+        "negation-changed: 1 before, 0 after"
+      ],
+      "review": [
+        "how-often-removed: many",
+        "text-halved: 148 words before, 68 after"
+      ]
+    }
+  },
+  {
+    "file": "15-faq.txt",
+    "set": "held",
+    "original": {
+      "words": 183,
+      "signs": 21.9
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 129,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 129,
+      "signs": 0.0,
+      "fail": [
+        "negation-changed: 2 before, 4 after"
+      ],
+      "review": []
+    }
+  },
+  {
+    "file": "16-update.txt",
+    "set": "held",
+    "original": {
+      "words": 182,
+      "signs": 27.5
+    },
+    "with": {
+      "verdict": "pass",
+      "words": 150,
+      "signs": 33.3,
+      "fail": [],
+      "review": []
+    },
+    "without": {
+      "verdict": "fail",
+      "words": 129,
+      "signs": 0.0,
+      "fail": [
+        "number-lost: 2023",
+        "name-lost: Stakeholders",
+        "doubt-removed: potentially",
+        "certainty-added: all"
+      ],
+      "review": []
+    }
+  }
+]

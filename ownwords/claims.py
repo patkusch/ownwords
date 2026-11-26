@@ -29,7 +29,9 @@ NEGATION_RE = re.compile(
     r"|n['’]t\b", re.I)
 # "Not just X but Y" is a figure of speech, not a real negation.
 RHETORICAL_RE = re.compile(
-    r"\b(?:not|n['’]t)\s+(?:just|only|merely|simply|solely)\b|\bno longer just\b", re.I)
+    r"\b(?:not|n['’]t)\s+(?:just|only|merely|simply|solely)\b|\bno longer just\b"
+    r"|\b(?:do not|don['’]t)\s+(?:hesitate|miss|forget)\b|\bwithout further ado\b|\bno doubt\b"
+    r"|\blook no further\b", re.I)
 SENTENCE_RE = re.compile(r"[^.!?\n]+[.!?]+|[^.!?\n]+$", re.M)
 NUMBER_NEXT = re.compile(r"\s+(?:[$€£]?\d|a\s|an\s|one\b|two\b|three\b|half\b)", re.I)
 

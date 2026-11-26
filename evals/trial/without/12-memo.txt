@@ -1,0 +1,22 @@
+MEMO
+
+To: Head of IT Operations
+Date: 26 October 2026
+Subject: Proposal to trial remote first-line IT support
+
+I recommend a 12-week trial of remote first-line support, starting on 11 January 2027.
+
+Why
+The help desk has three people and handles 1,840 tickets a quarter. About 70% of those are password resets. Users wait too long for simple fixes.
+
+Evidence
+The Leeds office ran a similar trial in 2025. Average wait time fell from 22 minutes to 9.
+
+Cost
+Under £5,000, including software and training.
+
+How we will judge it
+Two measures: the average time to resolve a ticket, and what users say about the service.
+
+Next step
+If you agree, I will write up a detailed plan for approval before the start date.

@@ -45,6 +45,16 @@ class Facts(unittest.TestCase):
     def test_two_word_name_at_sentence_start(self):
         self.assertIn("Marta", facts.extract("Marta Kowalczyk runs the bakery.")["name"])
 
+    def test_name_with_possessive_is_still_there(self):
+        self.assertEqual(facts.compare("We asked Fatima Noor.", "We took Fatima Noor's advice."), [])
+
+    def test_heading_and_label_capitals_are_not_names(self):
+        before = "**Key Features:**\n\nSubject: Update On Boiler Issues\n\nThe tool is fast."
+        self.assertEqual(facts.extract(before)["name"], set())
+
+    def test_sign_off_name_counts(self):
+        self.assertEqual(facts.extract("Thanks for reading.\n\nPriya Raman")["name"], {"Priya", "Raman"})
+
     def test_citations(self):
         got = facts.extract("This is known [3, 4] and was repeated (Chen and Abara, 2024).")["citation"]
         self.assertEqual(got, {"[3,4]", "(Chen and Abara 2024)"})

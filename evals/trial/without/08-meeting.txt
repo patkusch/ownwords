@@ -1,0 +1,21 @@
+Team meeting, 9 November 2026
+
+Present: Sam Ortiz, Lena Fischer, Tariq Aziz
+
+Release date
+The app release has moved to 15 December 2026.
+
+Bugs
+Seven bugs are open. Two are critical.
+
+Lena is working on the login bug. She thinks the new caching may be the cause but has not confirmed it, and will keep testing.
+
+Availability
+Tariq is away from 20 to 24 November. That could slow bug fixing and testing.
+
+Agreed
+- Fix the two critical bugs first.
+- Lena to press on with the login bug.
+- Sam and Tariq to arrange a handover before Tariq goes, and Sam to keep track of progress.
+
+Next meeting: 12 November.

@@ -64,7 +64,7 @@ def _print_check(result: dict) -> None:
     print(headline[result["verdict"]])
     for level in ("fail", "review"):
         for finding in result[level]:
-            print(f"  [{level}] {PLAIN.get(finding['kind'], finding['kind'])}: {finding['detail']}")
+            print(f"  [{level}] {PLAIN.get(finding['kind'], finding['kind'])}: {finding['detail']}  ({finding['kind']})")
     for finding in result["waived"]:
         print(f"  [waived] {PLAIN.get(finding['kind'], finding['kind'])}: "
               f"{finding['detail']} (reason given: {finding['reason']})")
@@ -74,7 +74,7 @@ def _print_score(result: dict, name: str) -> None:
     print(f"{name}: {result['per_1000_words']} points per 1,000 words "
           f"({result['words']} words)")
     if not result["found"]:
-        print("  No signs found. Leave this text alone.")
+        print("  No scored signs found. The scorer only knows a short list, so read the text yourself too.")
     for item in result["found"]:
         print(f"  {item['label']} x{item['count']}: {item['why']}")
         for hit in item["hits"][:5]:

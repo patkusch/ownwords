@@ -1,0 +1,7 @@
+I've just finished the Data Analyst course at Northgate College. It ran for 14 weeks, in the evenings.
+
+For my project I looked at bus delays in Manchester. I took 1.2 million rows of public data and built a dashboard to show where and when buses run late.
+
+One finding stood out: delays were about 30% worse on rainy days. I only had one winter of data, so I'd treat that as a starting point and not a firm result. I'd like to test it on more years.
+
+I'm now looking for a junior data analyst job in Manchester. If you know of one, or want to see the dashboard, please get in touch.

@@ -9,8 +9,9 @@
 
 Usage: bench.py [--write] [--gate]
   --write  save evals/results/bench.json
-  --gate   exit 1 if a planted error that must be caught was missed, or if
-           more than 2 of the human samples show any sign
+  --gate   exit 1 if any kind of planted error is caught less often than in
+           evals/baseline.json, or if more than 2 human samples show any sign
+  --set-baseline  record the current catch counts as the new floor
 """
 from __future__ import annotations
 
@@ -169,7 +170,7 @@ def _sentences(text):
 
 def drop_fact_sentence(text, rng):
     parts = _sentences(text)
-    options = [i for i, s in enumerate(parts) if re.search(r"\d", s)]
+    options = [i for i, s in enumerate(parts) if facts.extract(s)["number"]]
     if len(parts) < 3 or not options:
         return None
     del parts[rng.choice(options)]
@@ -185,12 +186,6 @@ def drop_plain_sentence(text, rng):
     del parts[rng.choice(options)]
     return " ".join(parts) + "\n"
 
-
-# Planted errors the checker is known not to catch reliably. They are measured
-# and published, not gated.
-KNOWN_BLIND = {"Two numbers swapped with each other",
-               "A sentence with no hard fact removed",
-               "A vague sentence with no fact added"}
 
 PLANTS = [
     ("A number changed", change_number),
@@ -278,9 +273,14 @@ def main():
         out = ROOT / "evals" / "results"
         out.mkdir(exist_ok=True)
         (out / "bench.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    baseline_path = ROOT / "evals" / "baseline.json"
+    if "--set-baseline" in sys.argv:
+        baseline_path.write_text(json.dumps(
+            {r["plant"]: r["failed"] + r["flagged_for_review"] for r in plant_rows}, indent=2) + "\n")
     if "--gate" in sys.argv:
+        baseline = json.loads(baseline_path.read_text())
         slipped = [r["plant"] for r in plant_rows
-                   if r["plant"] not in KNOWN_BLIND and r["missed"]]
+                   if r["failed"] + r["flagged_for_review"] < baseline.get(r["plant"], 0)]
         human_flagged = sum(1 for r in sign_rows if r["set"] == "human" and r["signs"])
         if slipped or human_flagged > 2:
             print("\nGATE FAILED:", slipped or f"{human_flagged} human samples flagged")

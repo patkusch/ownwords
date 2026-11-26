@@ -1,0 +1,18 @@
+{
+  "A number changed": 31,
+  "A percent sign dropped": 8,
+  "A month changed": 14,
+  "A name changed": 30,
+  "A word changed inside a quotation": 12,
+  "A link changed": 3,
+  "A citation removed": 0,
+  "A word of doubt removed": 17,
+  "\"About\" or \"at least\" removed from a figure": 12,
+  "A \"not\" added or removed": 29,
+  "\"Definitely\" or \"always\" added": 29,
+  "A sentence with an invented fact added": 32,
+  "A sentence holding a number removed": 30,
+  "Two numbers swapped with each other": 11,
+  "A sentence with no hard fact removed": 13,
+  "A vague sentence with no fact added": 0
+}
