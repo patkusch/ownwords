@@ -1,0 +1,20 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.py]
+indent_style = space
+indent_size = 4
+
+[*.{json,yml,yaml,toml}]
+indent_style = space
+indent_size = 2
+
+# Sample texts are test material. Leave their spacing exactly as it is.
+[{evals,examples}/**]
+trim_trailing_whitespace = false
+insert_final_newline = false
