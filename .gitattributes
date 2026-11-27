@@ -1,0 +1,4 @@
+* text=auto eol=lf
+# Sample texts must not change by a single character between computers.
+evals/** -text
+examples/*.txt -text
