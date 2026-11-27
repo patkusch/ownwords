@@ -1,0 +1,7 @@
+version: 2
+updates:
+  # The checker has no dependencies. Only the CI steps need keeping current.
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
