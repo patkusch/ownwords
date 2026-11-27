@@ -53,6 +53,19 @@ List every sign it looks for, with its source and the date it must be checked ag
 python3 scripts/ownwords tells
 ```
 
+### What the result code means
+
+A script can read the result without reading the report.
+
+| Code | Meaning |
+|---|---|
+| 0 | Pass. Every fact and claim checked is still there. |
+| 1 | Fail. Something that must not change has changed. |
+| 2 | The command was typed wrongly, or a file could not be read. |
+| 3 | Review. No fact changed, but a person should look. |
+
+Add `--strict` to treat a review as a fail.
+
 ## Use the skill
 
 Copy this folder to where your assistant keeps its skills. For Claude Code:
