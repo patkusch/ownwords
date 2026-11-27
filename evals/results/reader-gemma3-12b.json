@@ -1008,6 +1008,438 @@
       "order_2": "plain",
       "winner": "plain",
       "position_bias": false
+    },
+    {
+      "file": "01-email.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "01-email.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "01-email.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "habitsonly",
+      "order_2": "habitsonly",
+      "winner": "habitsonly",
+      "position_bias": false
+    },
+    {
+      "file": "02-readme.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "plainonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "02-readme.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "habitsonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "02-readme.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "plainonly",
+      "order_2": "habitsonly",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "03-report.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "03-report.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "habitsonly",
+      "winner": "tie",
+      "position_bias": false
+    },
+    {
+      "file": "03-report.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "habitsonly",
+      "order_2": "plainonly",
+      "winner": "tie",
+      "position_bias": false
+    },
+    {
+      "file": "04-blog.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "04-blog.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "04-blog.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "plainonly",
+      "order_2": "habitsonly",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "05-product.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "plainonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "05-product.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "habitsonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "05-product.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "habitsonly",
+      "order_2": "habitsonly",
+      "winner": "habitsonly",
+      "position_bias": false
+    },
+    {
+      "file": "06-linkedin.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "plainonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "06-linkedin.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "06-linkedin.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "plainonly",
+      "order_2": "habitsonly",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "07-cover.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "07-cover.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "07-cover.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "habitsonly",
+      "order_2": "habitsonly",
+      "winner": "habitsonly",
+      "position_bias": false
+    },
+    {
+      "file": "08-meeting.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "plainonly",
+      "winner": "tie",
+      "position_bias": false
+    },
+    {
+      "file": "08-meeting.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "08-meeting.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "habitsonly",
+      "order_2": "plainonly",
+      "winner": "tie",
+      "position_bias": false
+    },
+    {
+      "file": "09-abstract.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "plainonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "09-abstract.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "habitsonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "09-abstract.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "plainonly",
+      "order_2": "habitsonly",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "10-press.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "10-press.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "habitsonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "10-press.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "plainonly",
+      "order_2": "habitsonly",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "11-newsletter.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "11-newsletter.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "habitsonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "11-newsletter.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "habitsonly",
+      "order_2": "habitsonly",
+      "winner": "habitsonly",
+      "position_bias": false
+    },
+    {
+      "file": "12-memo.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "plainonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "12-memo.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "habitsonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "12-memo.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "plainonly",
+      "order_2": "habitsonly",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "13-case.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "plainonly",
+      "winner": "tie",
+      "position_bias": false
+    },
+    {
+      "file": "13-case.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "habitsonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "13-case.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "plainonly",
+      "order_2": "habitsonly",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "14-event.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "plainonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "14-event.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "habitsonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "14-event.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "plainonly",
+      "order_2": "habitsonly",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "15-faq.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "plainonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "15-faq.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "habitsonly",
+      "order_2": "with",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "15-faq.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "plainonly",
+      "order_2": "habitsonly",
+      "winner": "tie",
+      "position_bias": true
+    },
+    {
+      "file": "16-update.txt",
+      "first": "plainonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "16-update.txt",
+      "first": "habitsonly",
+      "second": "with",
+      "order_1": "with",
+      "order_2": "with",
+      "winner": "with",
+      "position_bias": false
+    },
+    {
+      "file": "16-update.txt",
+      "first": "plainonly",
+      "second": "habitsonly",
+      "order_1": "habitsonly",
+      "order_2": "plainonly",
+      "winner": "tie",
+      "position_bias": false
     }
   ],
   "summary": {
@@ -1059,6 +1491,27 @@
       "original": 0,
       "tie": 9,
       "picked_whichever_came_first": 8
+    },
+    "plainonly vs with": {
+      "pairs": 16,
+      "plainonly": 0,
+      "with": 7,
+      "tie": 9,
+      "picked_whichever_came_first": 7
+    },
+    "habitsonly vs with": {
+      "pairs": 16,
+      "habitsonly": 0,
+      "with": 6,
+      "tie": 10,
+      "picked_whichever_came_first": 9
+    },
+    "plainonly vs habitsonly": {
+      "pairs": 16,
+      "plainonly": 0,
+      "habitsonly": 4,
+      "tie": 12,
+      "picked_whichever_came_first": 9
     }
   }
 }

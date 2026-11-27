@@ -39,6 +39,20 @@
       "signs": 0.0,
       "fail": [],
       "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 143,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 144,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
     }
   },
   {
@@ -79,6 +93,20 @@
       "signs": 37.3,
       "fail": [],
       "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 140,
+      "signs": 35.7,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 143,
+      "signs": 35.0,
+      "fail": [],
+      "review": []
     }
   },
   {
@@ -115,6 +143,20 @@
     "plain": {
       "verdict": "pass",
       "words": 167,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 193,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 193,
       "signs": 0.0,
       "fail": [],
       "review": []
@@ -164,6 +206,22 @@
         "negation-changed: 1 before, 0 after"
       ],
       "review": []
+    },
+    "plainonly": {
+      "verdict": "fail",
+      "words": 179,
+      "signs": 0.0,
+      "fail": [
+        "negation-changed: 1 before, 0 after"
+      ],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 178,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
     }
   },
   {
@@ -208,6 +266,24 @@
         "negation-changed: 1 before, 0 after"
       ],
       "review": []
+    },
+    "plainonly": {
+      "verdict": "fail",
+      "words": 107,
+      "signs": 0.0,
+      "fail": [
+        "negation-changed: 1 before, 0 after"
+      ],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "fail",
+      "words": 94,
+      "signs": 0.0,
+      "fail": [
+        "negation-changed: 1 before, 0 after"
+      ],
+      "review": []
     }
   },
   {
@@ -241,6 +317,20 @@
       "review": []
     },
     "plain": {
+      "verdict": "pass",
+      "words": 131,
+      "signs": 76.3,
+      "fail": [],
+      "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 143,
+      "signs": 69.9,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
       "verdict": "pass",
       "words": 131,
       "signs": 76.3,
@@ -284,6 +374,22 @@
       "signs": 0.0,
       "fail": [],
       "review": []
+    },
+    "plainonly": {
+      "verdict": "review",
+      "words": 164,
+      "signs": 0.0,
+      "fail": [],
+      "review": [
+        "sentences-added: 7 before, 11 after"
+      ]
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 126,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
     }
   },
   {
@@ -317,6 +423,20 @@
     "plain": {
       "verdict": "pass",
       "words": 148,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 159,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 150,
       "signs": 0.0,
       "fail": [],
       "review": []
@@ -359,6 +479,20 @@
     "plain": {
       "verdict": "pass",
       "words": 190,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 203,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 201,
       "signs": 0.0,
       "fail": [],
       "review": []
@@ -415,6 +549,20 @@
       "signs": 71.9,
       "fail": [],
       "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 173,
+      "signs": 69.4,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 178,
+      "signs": 67.4,
+      "fail": [],
+      "review": []
     }
   },
   {
@@ -448,6 +596,20 @@
     "plain": {
       "verdict": "pass",
       "words": 119,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 133,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 123,
       "signs": 0.0,
       "fail": [],
       "review": []
@@ -492,6 +654,20 @@
       "signs": 26.2,
       "fail": [],
       "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 196,
+      "signs": 25.5,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 191,
+      "signs": 26.2,
+      "fail": [],
+      "review": []
     }
   },
   {
@@ -528,6 +704,20 @@
     "plain": {
       "verdict": "pass",
       "words": 205,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 222,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 215,
       "signs": 0.0,
       "fail": [],
       "review": []
@@ -584,6 +774,22 @@
         "name-lost: Featuring"
       ],
       "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 111,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "fail",
+      "words": 102,
+      "signs": 0.0,
+      "fail": [
+        "name-lost: Featuring"
+      ],
+      "review": []
     }
   },
   {
@@ -619,6 +825,20 @@
     "plain": {
       "verdict": "pass",
       "words": 171,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 168,
+      "signs": 0.0,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 169,
       "signs": 0.0,
       "fail": [],
       "review": []
@@ -661,6 +881,20 @@
       "verdict": "pass",
       "words": 177,
       "signs": 28.2,
+      "fail": [],
+      "review": []
+    },
+    "plainonly": {
+      "verdict": "pass",
+      "words": 176,
+      "signs": 28.4,
+      "fail": [],
+      "review": []
+    },
+    "habitsonly": {
+      "verdict": "pass",
+      "words": 174,
+      "signs": 28.7,
       "fail": [],
       "review": []
     }

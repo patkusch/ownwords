@@ -28,8 +28,10 @@ READER = ROOT / "evals" / "reader"
 
 MATCHES = [("with", "original"), ("with", "without"), ("without", "original"),
            ("quirks", "with"), ("quirks", "original"),
-           ("plain", "with"), ("plain", "original")]
-LABEL = {"plain": "rewrite with the plain-words step", "quirks": "rewrite with habits and slips", "with": "rewrite with the skill", "without": "rewrite without the skill",
+           ("plain", "with"), ("plain", "original"),
+           ("plainonly", "with"), ("habitsonly", "with"), ("plainonly", "habitsonly")]
+LABEL = {"plainonly": "rewrite with plain words only", "habitsonly": "rewrite with human habits only",
+         "plain": "rewrite with the plain-words step", "quirks": "rewrite with habits and slips", "with": "rewrite with the skill", "without": "rewrite without the skill",
          "original": "machine draft"}
 
 QUESTION = """Below are two versions of the same document, Version A and Version B.
@@ -50,7 +52,7 @@ def texts(name: str) -> dict:
     out = {"original": (TRIAL / "with" / name.replace(".txt", ".original.txt")).read_text(encoding="utf-8").strip(),
             "with": (TRIAL / "with" / name).read_text(encoding="utf-8").strip(),
            "without": (TRIAL / "without" / name).read_text(encoding="utf-8").strip()}
-    for arm in ("quirks", "plain"):
+    for arm in ("quirks", "plain", "plainonly", "habitsonly"):
         extra = TRIAL / arm / name
         if extra.exists():
             out[arm] = extra.read_text(encoding="utf-8").strip()

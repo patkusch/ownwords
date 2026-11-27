@@ -23,7 +23,7 @@ for original in sorted((TRIAL / "with").glob("*.original.txt")):
     before = original.read_text(encoding="utf-8")
     row = {"file": name, "set": "tune" if name[:2] <= "08" else "held",
            "original": {"words": words(before), "signs": tells.score(before)["per_1000_words"], "text": before}}
-    for arm in ("with", "without", "quirks", "plain"):
+    for arm in ("with", "without", "quirks", "plain", "plainonly", "habitsonly"):
         path = TRIAL / arm / name
         if not path.exists():
             continue
@@ -35,7 +35,7 @@ for original in sorted((TRIAL / "with").glob("*.original.txt")):
                     "review": [f"{f['kind']}: {f['detail']}" for f in result["review"]]}
     rows.append(row)
 
-for arm in ("with", "without", "quirks", "plain"):
+for arm in ("with", "without", "quirks", "plain", "plainonly", "habitsonly"):
     done = [r for r in rows if arm in r]
     print(f"\n{arm} the skill: {len(done)} rewrites")
     for verdict in ("pass", "review", "fail"):
@@ -49,7 +49,7 @@ for arm in ("with", "without", "quirks", "plain"):
             print(f"    {r['file']}: " + "; ".join(r[arm]["fail"]))
 print("\nHow plain each version is, all 16 documents together")
 print(f"{'version':22} words  words/sentence  long words %  heavy per 1,000  sentences over 30")
-for arm in ("original", "without", "with", "quirks", "plain"):
+for arm in ("original", "without", "with", "quirks", "plain", "plainonly", "habitsonly"):
     joined = "\n\n".join(r[arm]["text"] for r in rows if arm in r)
     if not joined:
         continue

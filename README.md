@@ -131,6 +131,9 @@ A blind reader saw two versions of each document with no labels and picked one. 
 | Habits and slips against the machine draft | 4 | 4 | 8 |
 | Plain words and habits against the earlier skill rewrite | 0 | 6 | 10 |
 | Plain words and habits against the machine draft | 7 | 0 | 9 |
+| Plain words only against the earlier skill rewrite | 0 | 7 | 9 |
+| Human habits only against the earlier skill rewrite | 0 | 6 | 10 |
+| Plain words only against human habits only | 0 | 4 | 12 |
 
 What this says:
 
@@ -138,7 +141,7 @@ What this says:
 - **This reader cannot separate the two rewrites.** In 13 of 16 pairs it simply picked whichever version it saw first.
 - **Deliberate slips lost.** The version with misspellings and dropped commas lost to the clean rewrite 10 to 1, and only drew with the machine draft.
 
-- **The newer skill did not beat the older one.** With the plain-words step and human habits added, the rewrite still beat the machine draft 7 to 0, but lost to the first version of the skill 6 to 0 with 10 ties. Both newer versions include the human habits, and both lost, so the habits are the first suspect. The two were not tested apart, and the newer rewrites are also longer (87% of the words kept against 78%).
+- **The newer skill did not beat the older one, and length is the likely reason.** The plain-words step and the human habits were tested together and then apart. Each time the first version of the skill won. But the first version cut about a quarter of the words, and every later version cut a tenth or less. Across all rewrite-against-rewrite pairs where the reader made up its mind, the shorter text won 24 times and the longer one twice. So this test cannot say whether plain words or human habits help or hurt. It says this reader likes shorter text, although it was told not to judge on length.
 
 A small model is a poor stand-in for a person, and a model may punish typos more than a human reader would. To judge for yourself, [evals/reader/sheet.md](evals/reader/sheet.md) holds 32 unlabelled pairs:
 
@@ -199,7 +202,7 @@ When you edit a rewrite, `ownwords kept` records which sentences you changed. Tu
 ## Not built yet
 
 - A reader test with people. The blind sheet exists, but only a model has judged so far.
-- A trial that tests the plain-words step and the human habits apart, to find which one the reader marked down.
+- A reader test that holds length steady, so that plain words and human habits can be judged on their own.
 - Scoring a rewrite against samples of your own writing. The skill uses your samples, but nothing measures how close it got.
 - Languages other than English. The fact check works on numbers, links and quotations in any language. The signs are English only.
 - Repeat runs of the trial, to measure noise.
