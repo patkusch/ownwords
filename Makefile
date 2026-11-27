@@ -1,6 +1,10 @@
-.PHONY: test bench check
+.PHONY: help check test bench
 
-# Run everything CI runs.
+help:
+	@echo "make check   run everything CI runs"
+	@echo "make test    run the tests"
+	@echo "make bench   check that every planted error is still caught"
+
 check: test bench
 
 test:
