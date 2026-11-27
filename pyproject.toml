@@ -11,6 +11,18 @@ requires-python = ">=3.10"
 license = "MIT"
 authors = [{ name = "Patricia Kusch" }]
 dependencies = []
+keywords = ["writing", "editing", "plain-english", "fact-checking", "agent-skill"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Operating System :: OS Independent",
+  "Topic :: Text Processing :: Linguistic",
+]
+
+[project.urls]
+Homepage = "https://github.com/patkusch/ownwords"
+Issues = "https://github.com/patkusch/ownwords/issues"
+Changelog = "https://github.com/patkusch/ownwords/blob/main/CHANGELOG.md"
 
 [project.scripts]
 ownwords = "ownwords.cli:main"
