@@ -1,5 +1,7 @@
 # ownwords
 
+[![tests](https://github.com/patkusch/ownwords/actions/workflows/tests.yml/badge.svg)](https://github.com/patkusch/ownwords/actions/workflows/tests.yml)
+
 **Make machine-sounding text read like a person wrote it, without changing what it says.**
 
 Most "humanizer" tools rewrite your text and hope for the best. They change numbers, drop names, turn "may" into "will", and sometimes invent a quotation. ownwords rewrites the text and then checks its own work. If a number, name, date, quotation, link or claim changed, the rewrite fails and is fixed before you see it.
