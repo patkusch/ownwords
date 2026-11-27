@@ -6,6 +6,8 @@ What changed, newest first. Nothing has been released as a numbered version yet.
 
 ### 2026-11-27
 
+- Added pages for common questions, what the lock checks, and the words the project uses.
+- The README now explains the result codes.
 - Added a plain-words step to the skill: everyday words, verbs in place of nouns, one idea per sentence.
 - `ownwords score` now also says how plain a text is.
 - `ownwords check` now says whether a rewrite came out plainer or heavier.
