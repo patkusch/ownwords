@@ -260,6 +260,11 @@ class CommandLine(unittest.TestCase):
         self.assertEqual(record["sentences_changed"], 1)
         self.assertEqual(record["added"], ["It is a tool used by 40 teams."])
 
+    def test_version_matches_the_project_file(self):
+        done = self.run_cli("--version")
+        self.assertEqual(done.returncode, 0)
+        self.assertIn(f'version = "{done.stdout.strip()}"', (ROOT / "pyproject.toml").read_text())
+
     def test_json(self):
         a, bad = str(self.dir / "a.txt"), str(self.dir / "bad.txt")
         self.assertEqual(json.loads(self.run_cli("check", a, bad, "--json").stdout)["verdict"], "fail")
