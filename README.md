@@ -222,6 +222,14 @@ When you edit a rewrite, `ownwords kept` records which sentences you changed. Tu
 - Languages other than English. The fact check works on numbers, links and quotations in any language. The signs are English only.
 - Repeat runs of the trial, to measure noise.
 
+## More to read
+
+- [Questions people ask](docs/FAQ.md)
+- [What the lock checks](docs/WHAT-IS-CHECKED.md)
+- [Words this project uses](docs/GLOSSARY.md)
+- [What changed and when](CHANGELOG.md)
+- [How to contribute](CONTRIBUTING.md)
+
 ## Where the ideas came from
 
 The signs come from Wikipedia's [Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing) and the studies it cites. That page warns against treating the signs as the problem to fix, and this project takes the warning seriously. The idea of fitting a checker beside a writing skill owes a debt to [slop-guard](https://github.com/eric-tramel/slop-guard), and the idea of freezing numbers and citations to [academic-humanizer](https://github.com/AIScientists-Dev/academic-humanizer). No code or text was copied from either.
